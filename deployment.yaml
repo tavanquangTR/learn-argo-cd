@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.25
+        image: chickendev/my-k8s-site:v2   # ← 更新
+        imagePullPolicy: Always                      # ← Never から変更
         ports:
         - containerPort: 80
         env:
